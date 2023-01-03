@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.project.compositeKey.Product" table="PRODUCT">
+<composite-id>
+<key-property name="cname"/>
+<key-property name="pname"/>
+</composite-id>
+
+<version name="v" column="VERSION"/> <!--how many time particular row data is affected it will count(update)  -->
+<property name="price" column="PRICE"/>
+
+
+
+
+</class>
+</hibernate-mapping>

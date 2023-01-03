@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="org.project.inheritance1.Employee" table="Employee1">
+
+<id name="eid" />
+<property name="ename"/>
+
+<union-subclass name="org.project.inheritance1.PEmployee" table="PEmployee1">
+<property name="esal"/>
+</union-subclass>
+
+<union-subclass name="org.project.inheritance1.CEmployee" table="CEmployee1">
+<property name="hrate"/>
+</union-subclass>
+
+
+
+</class>
+</hibernate-mapping>
