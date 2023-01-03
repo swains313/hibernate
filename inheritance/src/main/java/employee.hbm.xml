@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.hierachial.inheritance.Employee" >
+
+<id name="eid" />
+<discriminator column="type" type="string"></discriminator>
+<property name="ename" />
+
+<subclass name="com.hierachial.inheritance.PEmployee" extends="com.hierachial.inheritance.Employee" discriminator-value="PE">
+<property name="esal"/>
+</subclass>
+
+<subclass name="com.hierachial.inheritance.CEmployee" extends="com.hierachial.inheritance.Employee" discriminator-value="CE">
+<property name="hrate"/>
+</subclass>
+
+</class>
+</hibernate-mapping>
