@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="org.hibernate.project1.ProductDTO" table="ProductDto">
+
+<id name="pid" column="pid"/>
+<property name="pname" column="pname"/>
+<property name="pprice" column="pprice"/>
+
+</class>
+
+
+<!-- for HQL query you to write like this  -->
+<query name="q1">
+	from ProductDTO p where p.pid=?
+</query>
+
+<!--SQL query u have to like this  -->
+
+<sql-query name="q2">
+select * from ProductDto where pid=?
+</sql-query>
+
+
+
+
+
+
+
+</hibernate-mapping>

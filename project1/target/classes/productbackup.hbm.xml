@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="org.hibernate.project1.ProductBackupDto" table="productbackup">
+
+<id name="xpid" column="bpid"/>
+<property name="xpname" column="bpname"/>
+<property name="xpprice" column="bpprice"/>
+
+</class>
+</hibernate-mapping>
